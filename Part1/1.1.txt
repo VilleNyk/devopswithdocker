@@ -1,0 +1,4 @@
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+17ca5a4b05b5        hello-world         "/hello"                 3 minutes ago       Exited (0) 3 minutes ago                       compassionate_raman
+575aafa48da8        alpine/git          "git --help"             4 minutes ago       Exited (0) 4 minutes ago                       elegant_satoshi
+6082baf6fff9        nginx               "/docker-entrypoint.…"   5 minutes ago       Up 5 minutes               80/tcp              goofy_ptolemy

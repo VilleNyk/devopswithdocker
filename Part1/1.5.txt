@@ -1,0 +1,16 @@
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker run -d -it --name exercise2 ubuntu:16.04
+30b322c8a083541352d11d907baa1b7dfda9662da9884880f0f3ea58e67b1913
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker exec -it exercise2 bash
+root@30b322c8a083:/# apt-get update; apt-get install curl
+[...]
+root@30b322c8a083:/# sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

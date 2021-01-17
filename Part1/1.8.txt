@@ -1,0 +1,2 @@
+ni container.logs
+docker run -v ${pwd}/container.logs:/usr/app/logs.txt devopsdockeruh/first_volume_exercise

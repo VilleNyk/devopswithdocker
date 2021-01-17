@@ -1,0 +1,51 @@
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker pull devopsdockeruh/exec_bash_exercise
+Using default tag: latest
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+1c6172af85ee: Pull complete
+b194b0e3c928: Pull complete
+1f5ec00f35d5: Pull complete
+93b1353672b6: Pull complete
+3d7f38db3cca: Pull complete
+21e102f9fe89: Pull complete
+d851ffed797c: Pull complete
+a45031e28c68: Pull complete
+ca3c1414856f: Pull complete
+02c74c9936fd: Pull complete
+ddb55f8ab0a8: Pull complete
+Digest: sha256:d38b6f6b0eed2880e25c9eb7f83f1cd016ffe3a56c9a3fec6e7bee480bf1ed0f
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+docker.io/devopsdockeruh/exec_bash_exercise:latest
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker run -d --name exercise devopsdockeruh/exec_bash_exercise
+d64a8e2d196e62db6bd65512b6d51bce6452592b63f6547472750469c25fa65c
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker attach exercise
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+PS C:\Users\Sisu\Documents\Koulu\DevOps\Part1> docker exec -it exercise bash
+root@d64a8e2d196e:/usr/app# ls
+Dockerfile  README.md  index.js  logs.txt
+root@d64a8e2d196e:/usr/app# tail -f ./logs.txt
+"Docker is easy"
+Tue, 08 Dec 2020 18:20:25 GMT
+Tue, 08 Dec 2020 18:20:28 GMT
+Tue, 08 Dec 2020 18:20:31 GMT
+Tue, 08 Dec 2020 18:20:34 GMT
+Secret message is:
+"Docker is easy"
+Tue, 08 Dec 2020 18:20:40 GMT
+Tue, 08 Dec 2020 18:20:43 GMT
+Tue, 08 Dec 2020 18:20:46 GMT
+Tue, 08 Dec 2020 18:20:49 GMT
+Secret message is:
+"Docker is easy"
+Tue, 08 Dec 2020 18:20:55 GMT
+Tue, 08 Dec 2020 18:20:58 GMT
+^C
+root@d64a8e2d196e:/usr/app# exit
+exit
