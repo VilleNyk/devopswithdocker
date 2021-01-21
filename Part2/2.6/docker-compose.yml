@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  redis:
+      image: redis
+  postgres:
+      image: postgres
+      environment: 
+        - POSTGRES_USER=kayttaja
+        - POSTGRES_PASSWORD=salasana
+        - POSTGRES_DB=tietokanta
+  backend:
+      image: backend
+      ports:
+        - 8000:8000
+      environment:
+        - REDIS=redis
+        - DB_USERNAME=kayttaja
+        - DB_PASSWORD=salasana
+        - DB_NAME=tietokanta
+        - DB_HOST=postgres
+  frontend:
+      image: frontend
+      ports:
+        - 5000:5000
+  
